@@ -1,3 +1,4 @@
+// TODO install and configure webpack-dev-server
 const path = require("path");
 
 module.exports = {
