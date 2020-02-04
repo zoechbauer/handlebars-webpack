@@ -12,3 +12,6 @@ After cloning this repo and CD'ing into the project folder be sure to run `npm i
 Then, whenever you want to bundle everything up simply run `webpack` 
 
 Celebrate.
+----------------------
+
+zoe: i added webpack und webpack-cli as teached in Brad's Udemy Course and want to add webpacks-dev-server as teached by Brad.
