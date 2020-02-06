@@ -14,13 +14,12 @@ Then, whenever you want to bundle everything up simply run `webpack`
 
 ## Celebrate.
 
-# Zoe planned enhancements
+# zoe's planned enhancements
 
 These enhancements are used to become familiar with webpack and are developed under feature branch webpack-dev-server. I'll use the learned knowledge of Brad Schiff's Udemy travel-site course.
 
 ## What I still want to do
 
-- use axios for http request
 - use app.js as collection of links to modules
 - use hash names instead of bundle.js and styles.css
 
@@ -33,3 +32,4 @@ These enhancements are used to become familiar with webpack and are developed un
 - use webpack for build & webpack-dev-server for development
 - convert ES6 to ES2015 with babel
 - extract css from bundle.js
+- use native javascript **fetch api for http request**

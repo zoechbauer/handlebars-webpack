@@ -1,0 +1,22 @@
+
+// REST Client is a very cool extension
+// https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+
+Get https://jsonplaceholder.typicode.com/posts
+
+###
+
+Post https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+    "title": "New Post",
+    "body": "This is a new post."
+}
+
+###
+
+GET https://learnwebcode.github.io/json-example/pets-data.json
+
+
