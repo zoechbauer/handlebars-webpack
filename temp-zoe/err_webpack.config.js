@@ -1,12 +1,30 @@
 // TODO  use app.js as collection of links to modules
-// TODO use hash names
+// TODO  use separate folder for development and production
+// TODO  clear production folder on build
+// TODO  use webpack-dev-server on npm run dev
 
-const currentTask = process.env.npm_lifecycle_event;
+const currentTask = process.env.npm_lifecylce_event;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const fse = require('fs-extra');
+
+class RunAfterCompile {
+  apply(compiler) {
+    compiler.hooks.beforeRun.tapAsync('MyCustomBeforeRunPlugin', function(
+      compiler,
+      callback
+    ) {
+      // debugger
+      console.dir(compiler.options);
+      callback();
+    });
+
+    // compiler.hooks.done.tap('copy images', () => {
+    //   fse.copySync('./app/assets/images', './docs/assets/images');
+    // });
+  }
+}
 
 let pages = fse
   .readdirSync('./app')
@@ -43,16 +61,6 @@ let config = {
           }
         ]
       },
-      {
-        test: /\.js$/i,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      },
       cssConfig
     ]
   }
@@ -75,19 +83,19 @@ if (currentTask === 'dev') {
     host: '0.0.0.0',
     disableHostCheck: true
   };
+  console.log('currentTask', currentTask);
+  console.log('config', config);
 }
 
 if (currentTask === 'build') {
   config.mode = 'production';
-  cssConfig.use.unshift(MiniCssExtractPlugin.loader);
   config.output = {
     filename: 'bundled.js',
     path: path.resolve(__dirname, 'docs')
   };
-  config.plugins.push(
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles.css' })
-  );
+  config.plugins.push(new CleanWebpackPlugin(), new RunAfterCompile());
+  console.log('currentTask', currentTask);
+  console.log('config', config);
 }
 
 module.exports = config;

@@ -1,3 +1,4 @@
+// TODO use axios for http request
 import '../styles/styles.css';
 
 // class version does not work!!!
@@ -6,6 +7,11 @@ import '../styles/styles.css';
 // import CalculateAge from './modules/calculateAge';
 // new Http();
 // new CalculateAge();
+
+// used for webpack-dev-server
+if (module.hot) {
+  module.hot.accept();
+}
 
 var myTemplate = require('./myTemplate.hbs');
 
