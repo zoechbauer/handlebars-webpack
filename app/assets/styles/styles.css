@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: #DDD;
+  background-color: #ddd;
 }
 
 img {
@@ -13,7 +14,7 @@ img {
 
 .buttons button {
   background-color: #046380;
-  color: #FFF;
+  color: #fff;
   border: none;
   padding: 10px 15px;
   font-size: 15px;
@@ -22,13 +23,14 @@ img {
   outline: none;
   box-shadow: 2px 2px 0 #034154;
   margin-right: 5px;
-  transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out,
+    visibility 0.4s ease-out;
   position: relative;
   top: -10px;
 }
 
 .buttons button:hover {
-  background-color: #034F66;
+  background-color: #034f66;
 }
 
 .buttons button:active {
@@ -67,7 +69,7 @@ p {
 }
 
 .pet {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -86,12 +88,12 @@ p {
 
 .headline-bar {
   margin: 0;
-  background-color: #CCC;
+  background-color: #ccc;
   padding: 8px 15px;
 }
 
 .favorite-foods {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   padding: 0;
   margin: 0;
 }
@@ -100,7 +102,7 @@ p {
   list-style: none;
   border-bottom: 1px dotted #999;
   padding: 8px 15px;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .photo-column {
