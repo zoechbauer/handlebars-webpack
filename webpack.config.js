@@ -81,12 +81,16 @@ if (currentTask === 'build') {
   config.mode = 'production';
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
   config.output = {
-    filename: 'bundled.js',
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'docs')
+  };
+  config.optimization = {
+    splitChunks: { chunks: 'all' }
   };
   config.plugins.push(
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles.css' })
+    new MiniCssExtractPlugin({ filename: 'styles.[chunkhash].css' })
   );
 }
 
