@@ -20,7 +20,6 @@ These enhancements are used to become familiar with webpack and are developed un
 
 ## What I still want to do
 
-- minify the css-file
 - use app.js as collection of links to modules
 
 ## What I already committed
@@ -34,3 +33,5 @@ These enhancements are used to become familiar with webpack and are developed un
 - extract css from bundle.js
 - use native javascript **fetch api for http request**
 - use hash names instead of bundle.js and styles.css (but the files are not minified)
+- added normalize.css
+- minify the css-file with cssnano

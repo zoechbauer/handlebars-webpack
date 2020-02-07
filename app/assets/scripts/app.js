@@ -1,4 +1,5 @@
 import '../styles/styles.css';
+import 'normalize.css';
 
 // class version does not work!!!
 

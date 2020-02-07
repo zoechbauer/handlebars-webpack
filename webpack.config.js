@@ -1,5 +1,4 @@
 // TODO  use app.js as collection of links to modules
-// TODO use hash names
 
 const currentTask = process.env.npm_lifecycle_event;
 const path = require('path');
@@ -80,6 +79,10 @@ if (currentTask === 'dev') {
 if (currentTask === 'build') {
   config.mode = 'production';
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
+  cssConfig.use.push({
+    loader: 'postcss-loader',
+    options: { plugins: require('cssnano') }
+  });
   config.output = {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js',
