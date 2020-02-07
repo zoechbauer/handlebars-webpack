@@ -1,13 +1,6 @@
 import '../styles/styles.css';
 import 'normalize.css';
 
-// class version does not work!!!
-
-// import Http from './modules/HttpClass';
-// import CalculateAge from './modules/calculateAge';
-// new Http();
-// new CalculateAge();
-
 // used for webpack-dev-server
 if (module.hot) {
   module.hot.accept();

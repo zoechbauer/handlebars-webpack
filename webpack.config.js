@@ -1,5 +1,3 @@
-// TODO  use app.js as collection of links to modules
-
 const currentTask = process.env.npm_lifecycle_event;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');

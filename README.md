@@ -14,15 +14,11 @@ Then, whenever you want to bundle everything up simply run `webpack`
 
 ## Celebrate.
 
-# Zoe planned enhancements
+# Some enhancements by zoe
 
-This enhancements are used to become familiar with webpack and have been developed under feature branch webpack-dev-server. I'll use the learned knowledge of Brad Schiff's Udemy Course.
+This enhancements were used to become familiar with webpack and have been developed under feature branch webpack-dev-server. I'll used the learned knowledge of Brad Schiff's Udemy Course.
 
-## What I still want to do
-
-- use app.js as collection of links to modules
-
-## What I already committed
+## committed changes
 
 - changed folder structure
 - webpacks creates production folder docs on npm run build
